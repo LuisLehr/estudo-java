@@ -11,19 +11,17 @@ public class main {
 
         Scanner sc = new Scanner(System.in);
 
-        Produto produto = new Produto();
-
-        int quantidade;
-
         System.out.print("Entre com os dados do produto:\n");
         System.out.print("Nome: ");
-        produto.nome = sc.nextLine();
+        String nome = sc.nextLine();
 
         System.out.print("Preço: R$");
-        produto.preco = sc.nextDouble();
+        double preco = sc.nextDouble();
 
         System.out.print("Quantidade: ");
-        produto.quantidade = sc.nextInt();
+        int quantidade = sc.nextInt();
+
+        Produto produto = new Produto(nome, preco, quantidade);
 
         System.out.println(" ");
         System.out.println(produto.toString());
